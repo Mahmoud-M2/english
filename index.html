@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn English</title>
+    <title>Easy English :)</title>
     <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="./styles.css">
@@ -42,6 +48,9 @@
     </div>
     <div>
         <img class="logo" id="logo2" src="./tool/img/English easy logo-01.png" alt="">
+            <h2 class="test-start">Welcome to <span style="color:#ffcb6c">Easy</span> <span>English</span> </h2>
+    
+       
         <div class="btn_accept">
             <button class="game-button green" id="start">Start</button>
         </div>
@@ -103,7 +112,10 @@
         <div class="container">
             <!-- <h1 class="score">Score: <span id="score">0</span></h1> -->
             <div id="quizArea">
-                <h2 id="question" class="sound">Parrot</h2>
+                <div class="music" style="margin-bottom: 10px;">
+                    <h2 id="question" class="sound">panda</h2>
+                    <button id="replaySound" style="margin: 0px 20px 0px;"> <i class="fas fa-volume-up"></i>
+                </div>
                 <div class="images" id="imageOptions" style="display: flex;">
                     <div class="image-container">
                         <img src="./tool/img/bear.png" alt="Option 1" class="option" data-correct="false">
@@ -114,10 +126,12 @@
                         <span class="feedback" style="display: none;">❌</span>
                     </div>
                     <div class="image-container">
-                        <img src="./tool/img/parrot.png" alt="Option 3" class="option" data-correct="true">
+                        <img src="./tool/img/panda.png" alt="Option 3" class="option" data-correct="true">
                         <span class="feedback" style="display: none;">✔️</span>
                     </div>
                 </div>
+                   
+                
                 <div class="image-container-new" id="imageWithButtons" style="display: none;">
 
                     <img id="questionImage" src="" alt="Image for the question" class="question-image">
@@ -140,8 +154,8 @@
                     </div>
                     <div id="inputFields"></div>
                     <div class="buttons">
-                        <button id="replaySound"> <i class="fas fa-volume-up"></i>
-                        </button>
+                        <!-- <button id="replaySound"> <i class="fas fa-volume-up"></i>
+                        </button> -->
                         <button id="doneButton">Done</button>
                     </div>
                 </div>
@@ -153,14 +167,16 @@
 
             <div id="endScreen" style="display: none;">
                 <h2> The questions have ended.</h2>
-                <!-- <h3>High Score: <span id="finalHighscore">0</span></h3> -->
+                <h2>Result: <span id="score">0</span> From 17</h2>
+
                 <button id="again">Try Again!</button>
             </div>
         </div>
 
-        <!-- <h3 class="highscore">High Score: <span id="highscore ">0</span></h3> -->
         <div class="highscore">
-            <h3>(<span id="score">0</span>/17)</h3>
+            <!-- <h3 class="highscore">High Score: <span id="highscore ">0</span></h3> -->
+                <!-- <h3>High Score: <span id="finalscore">0</span></h3> -->
+
 
         </div>
         <h1 class="score"></h1>
