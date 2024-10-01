@@ -81,7 +81,7 @@ let questions = [
 
     {
         type: "imageOptions",
-        question: " panda ",
+        question: "",
         correctIndex: 1,
         images: ["./tool/img/parrot.png", "./tool/img/panda.png", "./tool/img/pen.png"],
         audio: "./tool/sound/panda.mp3"
@@ -140,7 +140,7 @@ let questions = [
 
     {
         type: "imageOptions",
-        question: "banana",
+        question: "",
         correctIndex: 2,
         images: ["./tool/img/plane.png", "./tool/img/parrot.png", "./tool/img/banana.png"],
         audio: "./tool/sound/banana.mp3"
@@ -378,12 +378,18 @@ document.querySelectorAll(".option").forEach(option => {
 document.getElementById("doneButton").addEventListener("click", function () {
     checkInput();
 });
-
 function endGame() {
+    // تخزين الـ score في finalScore
+    const finalScore = score; // تخزين قيمة score في finalScore
+
+    // إخفاء منطقة الأسئلة وعرض شاشة النهاية
     document.getElementById("quizArea").style.display = "none";
     document.getElementById("endScreen").style.display = "block";
+
+    // تحديث واجهة المستخدم
     document.getElementById("finalHighscore").textContent = highScore;
     document.getElementById("highscore").textContent = highScore;
+    document.getElementById("finalScore").textContent = finalScore; // عرض finalScore في واجهة المستخدم
 }
 
 document.getElementById("again").addEventListener("click", function () {
@@ -400,7 +406,6 @@ document.getElementById("again").addEventListener("click", function () {
 
     // إعادة تحميل السؤال الأول
     loadQuestion();
-
     // إعادة تعيين الصورة الرئيسية للصورة الأصلية
     resetImages();
 });
