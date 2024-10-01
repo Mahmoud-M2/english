@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Carter+One');
-
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Sixtyfour+Convergence&display=swap');
 
 /* scss */
 
@@ -656,8 +657,19 @@ button {
   display: none; /* بدءًا مع إخفاء العلامة */
 }
 
+.music{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #endScreen {
-  display: none; /* بدءًا مع إخفاء شاشة النهاية */
+  display: none;
+  background-color: #00000057;
+    display: block;
+    padding: 1px;
+    border-radius: 20px; /* بدءًا مع إخفاء شاشة النهاية */
 }
 
 #again {
@@ -716,6 +728,7 @@ button{
 }
 
 .images img {
+  height: 100%;
   border-radius: 10px;
   width: 100%;
   cursor: pointer;
@@ -757,9 +770,9 @@ button{
 }
 
 .question-image {
-  width: 200px;
-    /* margin: 20px 0; */
-    height: 200px;
+  width: 100%;
+  
+  height: 100%;
 }
 
 .buttons {
@@ -893,6 +906,20 @@ button{
     z-index: 1;
 }
 
+.test-start{
+  position: absolute;
+  color: white;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 20px;
+  text-align: center;
+  width: 100%;
+  font-family: "Chakra Petch", sans-serif;
+  z-index: 999;
+}
+
+
 #endScreen{
   position: relative;
     display: block;
@@ -900,7 +927,7 @@ button{
 }
 
 #again{
-  margin: 60px auto;
+  margin: 50px auto;
     position: relative;
 }
 .logo_img img {
@@ -1026,7 +1053,7 @@ button{
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 999px) {
 
   .boy {
     position: absolute;
@@ -1108,7 +1135,7 @@ button{
 
 
   #fullscreen-btn, #sound-btn, #behind {
-    font-size: 1.5vh;
+    font-size: 2vh;
 }
 .option-btn, #replaySound, #skipQuestion, #doneButton {
     position: relative;
@@ -1189,6 +1216,7 @@ button{
     width: 50%;
   }
 } */
+
 @media screen and (max-width: 400px) {
   .container{
     /* transform: translateY(12%); */
@@ -1266,3 +1294,123 @@ font-size: 1rem;
 
 
 }}
+
+@media screen and (min-height: 200px) {
+  .logo_img img {
+    width: 20% !important;
+    position: absolute;
+    left: auto !important;
+    top: 0%;
+    ;
+  }
+  .image-container {
+    border-radius: 10px;
+    background-color: #ffffff69;
+    border: solid 1.5px #ffffffa8;
+    width: 100px !important;
+    height: 115px !important;
+    position: relative;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#logo2 {
+  position: absolute;
+  /* width: 81%; */
+  top: 17%;
+  right: 14%;
+}
+
+}
+
+@media screen and (min-height: 600px) {
+  .image-container {
+      border-radius: 10px;
+      background-color: #ffffff69;
+      border: solid 1.5px #ffffffa8;
+      width: 160px !important;
+      height: 160px !important;
+      position: relative;
+      padding: 10px;
+      margin: 0 10px;
+  }
+  #logo2 {
+    position: absolute;
+    /* width: 81%; */
+    top: -9%;
+    right: -2%;
+    width: 27%;
+}
+}
+
+
+@media screen and (min-height: 1200px) {
+  .image-container {
+      border-radius: 10px;
+      background-color: #ffffff69;
+      border: solid 1.5px #ffffffa8;
+      width: 200px !important;
+      height: 200px !important;
+      position: relative;
+      padding: 10px;
+      margin: 0 10px;
+  }
+  .container{
+    top: 20%;
+  }
+  #mainImage {
+    position: absolute;
+    bottom: 0;
+    width: 15vh;
+    left: 2%;
+    z-index: 1;
+}
+}
+
+@media screen and (min-width: 260px) {
+  #logo2 {
+    position: absolute;
+    /* width: 81%; */
+    top: 5%;
+    right: 14%;
+    width: 59%;
+}
+}
+
+@media screen and (min-width: 580px) {
+  #logo2{
+    width: 30%;
+  }
+}
+@media screen and (min-width: 760px) {
+  .boy {
+    top: -8%;}
+}
+@media screen and (min-width: 1000px) {
+  .boy {
+    position: absolute;
+    bottom: -1%;
+    left: 10%;
+    width: 50%;
+    z-index: -1;
+  top: auto;  }
+  #logo2 {
+    position: absolute;
+    /* width: 81%; */
+    top: -4%;
+    right: -1%;
+    width: 27%;
+}
+}
+
+@media screen and (min-width: 1200px) {
+  .logo_img img {
+    
+      top: -6%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .logo_img img {
+      width: 32% !important;
+    }}
